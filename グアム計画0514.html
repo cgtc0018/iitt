@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>素敵なグアム旅行 | 3日間の思い出</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=600&q=80') center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .day-container {
+            margin-bottom: 4rem;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .day-header {
+            background: linear-gradient(to right, #00b4db, #0083b0);
+            color: white;
+            padding: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .itinerary-card {
+            display: flex;
+            margin: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+        
+        .itinerary-card:last-child {
+            border-bottom: none;
+        }
+        
+        .time-badge {
+            background-color: #0083b0;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            min-width: 80px;
+            text-align: center;
+            height: fit-content;
+            margin-right: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .itinerary-content {
+            flex: 1;
+        }
+        
+        .itinerary-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #0083b0;
+        }
+        
+        .itinerary-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .image-gallery {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+        
+        .gallery-image {
+            flex: 0 0 auto;
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .highlight {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, #ff8a00, #ff5252);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 82, 82, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(255, 82, 82, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .itinerary-card {
+                flex-direction: column;
+            }
+            
+            .time-badge {
+                margin-bottom: 1rem;
+                margin-right: 0;
+            }
+            
+            .gallery-image {
+                width: 150px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>グアム旅行の思い出</h1>
+        <p class="subtitle">素敵な3日間の冒険プラン</p>
+        <a href="#itinerary" class="cta-button">旅程を見る</a>
+    </header>
+
+    <div class="container" id="itinerary">
+        <div class="day-container">
+            <div class="day-header">1日目 - 美食と夜の冒険</div>
+            
+            <div class="itinerary-card">
+                <div class="time-badge">夜</div>
+                <div class="itinerary-content">
+                    <h3 class="itinerary-title">有名なドスハンバーガー</h3>
+                    <p class="itinerary-description">ボリューム満点のドスバーガー、アボカドバーガー、チリバーガーなどがおすすめ。高田パークで遊ぶ前に腹ごしらえに最適です。</p>
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="ドスバーガー" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="アボカドバーガー" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="チリバーガー" class="gallery-image">
+                    </div>
+                    <div class="highlight">
+                        <p>✓ ポイント: ボリューム満点で夜のアクティビティに備えるのに最適なエネルギー補給スポット！</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="itinerary-card">
+                <div class="time-badge">夜</div>
+                <div class="itinerary-content">
+                    <h3 class="itinerary-title">高田パーク(遊園地)</h3>
+                    <p class="itinerary-description">ライトアップされたアトラクションが幻想的な雰囲気。絶叫系からファミリー向けまで楽しめます。夜ならではのイベントにも注目。</p>
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1598188475272-e031a2e1382f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="夜の高田パーク" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="ライトアップされたアトラクション" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1559113202-c916b8e44373?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="夜のイベント" class="gallery-image">
+                    </div>
+                    <div class="highlight">
+                        <p>✓ ポイント: 夜空の下で楽しむアトラクションは昼間とは全く違った魅力があります！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-container">
+            <div class="day-header">2日目 - グルメとショッピング</div>
+            
+            <div class="itinerary-card">
+                <div class="time-badge">朝</div>
+                <div class="itinerary-content">
+                    <h3 class="itinerary-title">デュシットビーチリゾートホテルの朝食ビュッフェ</h3>
+                    <p class="itinerary-description">グアムのローカルフードを含む国際色豊かなメニュー。パン、卵料理、フルーツ、シリアル、ヨーグルトなどが楽しめます。</p>
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="朝食ビュッフェ" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="ローカルフード" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1563076429-c04cbe68da3a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="フルーツ盛り合わせ" class="gallery-image">
+                    </div>
+                    <div class="highlight">
+                        <p>✓ ポイント: 1日の始まりにエネルギー満タン！海を眺めながらの朝食は格別です。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="itinerary-card">
+                <div class="time-badge">昼</div>
+                <div class="itinerary-content">
+                    <h3 class="itinerary-title">アウトレット＆お土産探し</h3>
+                    <p class="itinerary-description">デュシットビーチリゾートホテルからアクセスしやすいGPO、マイクロネシアモール、タモンサンズプラザがお勧め。GPOは高級ブランド、マイクロネシアモールは幅広いジャンル、タモンサンズプラザは手頃な価格帯のショップが多いです。</p>
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1567958451986-2de427a4a0be?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="GPO" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="マイクロネシアモール" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1520006403909-838d6b92c22e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="タモンサンズプラザ" class="gallery-image">
+                    </div>
+                    <div class="highlight">
+                        <p>✓ ポイント: ショッピング天国グアムでお気に入りのブランドをお得にゲット！</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="itinerary-card">
+                <div class="time-badge">昼</div>
+                <div class="itinerary-content">
+                    <h3 class="itinerary-title">タシグリル(めちゃ雰囲気⭕️レストラン)</h3>
+                    <p class="itinerary-description">新鮮なシーフードやステーキがおすすめ。ロブスターやフィレミニョンは特に人気です。</p>
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="タシグリルの外観" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="シーフード料理" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1579366948929-444eb79881eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="ステーキ" class="gallery-image">
+                    </div>
+                    <div class="highlight">
+                        <p>✓ ポイント: 雰囲気抜群のレストランで上質な食事を堪能しましょう！</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="itinerary-card">
+                <div class="time-badge">夕方〜夜</div>
+                <div class="itinerary-content">
+                    <h3 class="itinerary-title">ビーチでゆっくり & 好きなこと</h3>
+                    <p class="itinerary-description">夕日を背景にしたり、波打ち際で遊ぶ様子を撮影したり、ヤシの木と一緒の写真を撮るのがおすすめ。ホテル前のビーチ以外にも、恋人岬やイパオビーチも絶景スポットです。恋人岬は夕日の名所としても有名。イパオビーチは白い砂浜と青い海のコントラストが美しいです。</p>
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="夕日とビーチ" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="恋人岬" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="イパオビーチ" class="gallery-image">
+                    </div>
+                    <div class="highlight">
+                        <p>✓ ポイント: SNS映え間違いなし！グアムの美しい景色を背景に素敵な思い出を残しましょう。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="itinerary-card">
+                <div class="time-badge">夜</div>
+                <div class="itinerary-content">
+                    <h3 class="itinerary-title">全社会食</h3>
+                    <p class="itinerary-description">旅行の思い出話に花を咲かせましょう。</p>
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="グループディナー" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="乾杯の様子" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="レストランの雰囲気" class="gallery-image">
+                    </div>
+                    <div class="highlight">
+                        <p>✓ ポイント: 仲間との楽しい食事で2日目の締めくくり。旅の思い出を共有する素敵な時間です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-container">
+            <div class="day-header">3日目 - 最後の冒険</div>
+            
+            <div class="itinerary-card">
+                <div class="time-badge">朝</div>
+                <div class="itinerary-content">
+                    <h3 class="itinerary-title">全員でパラセーリング</h3>
+                    <p class="itinerary-description">空から美しい海を眺める爽快な体験。撒布やビーチバレーなどもできる予定！！</p>
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1601024445121-e5b82f020549?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="パラセーリング" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1527844487296-5d6f4ec1308e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="ビーチバレー" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="マリンアクティビティ" class="gallery-image">
+                    </div>
+                    <div class="highlight">
+                        <p>✓ ポイント: 最高の景色を眺めながらのパラセーリングは一生の思い出に！</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="itinerary-card">
+                <div class="time-badge">昼</div>
+                <div class="itinerary-content">
+                    <h3 class="itinerary-title">近くのランチ探し中…</h3>
+                    <p class="itinerary-description">海の見えるレストランでラストグアム食を楽しみましょう！</p>
+                    <div class="image-gallery">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="海の見えるレストラン" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1524182732116-a3ad2034503c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="グアム料理" class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1569072712109-6206fa3505b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="グループランチ" class="gallery-image">
+                    </div>
+                    <div class="highlight">
+                        <p>✓ ポイント: 最後の食事は特別な場所で。グアムの味を心に刻みましょう！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2>素敵なグアム旅行の思い出</h2>
+        <p>仲間と過ごす最高の3日間</p>
+        <a href="#itinerary" class="cta-button">旅程を見る</a>
+    </footer>
+</body>
+</html>
